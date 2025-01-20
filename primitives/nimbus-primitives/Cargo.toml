@@ -10,7 +10,7 @@ async-trait = { workspace = true, optional = true }
 frame-support = { workspace = true }
 frame-system = { workspace = true }
 parity-scale-codec = { workspace = true }
-scale-info = { version = "2.0.0", default-features = false, features = [ "derive" ] }
+scale-info = { version = "2.11.1", default-features = false, features = [ "derive" ] }
 sp-api = { workspace = true }
 sp-application-crypto = { workspace = true }
 sp-inherents = { workspace = true }
