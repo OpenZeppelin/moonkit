@@ -23,6 +23,7 @@
 #[doc(hidden)]
 extern crate alloc;
 
+use alloc::string::ToString;
 use frame_support::traits::{FindAuthor, Get};
 use nimbus_primitives::{
 	AccountLookup, CanAuthor, NimbusId, SlotBeacon, INHERENT_IDENTIFIER, NIMBUS_ENGINE_ID,
