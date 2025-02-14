@@ -52,6 +52,11 @@
 
 #![cfg_attr(not(feature = "std"), no_std)]
 
+#[doc(hidden)]
+extern crate alloc;
+
+use alloc::string::ToString;
+
 pub use crate::weights::WeightInfo;
 use frame_support::pallet;
 pub use pallet::*;
@@ -278,9 +283,8 @@ pub mod pallet {
 			// Return Ok(Some(_)) unconditionally because this inherent is required in every block
 			// If it is not found, throw a VrfInherentRequired error.
 			Ok(Some(InherentError::Other(
-				sp_runtime::RuntimeString::Borrowed(
-					"Inherent required to set babe randomness results",
-				),
+				alloc::borrow::Cow::Borrowed("Inherent required to set babe randomness results")
+					.to_string(),
 			)))
 		}
 

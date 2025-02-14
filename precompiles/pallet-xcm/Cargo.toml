@@ -24,7 +24,7 @@ sp-weights = { workspace = true }
 parity-scale-codec = { workspace = true, features = [ "derive" ] }
 
 # Frontier
-evm = { workspace = true, features = [ "with-codec" ] }
+evm = { workspace = true, features = [ "scale" ] }
 fp-evm = { workspace = true }
 pallet-evm = { workspace = true, features = [ "forbid-evm-reentrancy" ] }
 
